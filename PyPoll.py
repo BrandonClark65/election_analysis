@@ -66,10 +66,8 @@ for candidate_name in candidate_votes:
     # Calculate the percentage of votes.
     vote_percentage = float(votes) / float(total_votes) * 100
 
-    # Print the candidate name and percentage of votes.
-    print(f"{candidate_name}: received {vote_percentage:.1f}% of the vote.")
-
-    #  To do: print out each candidate's name, vote count, and percentage of votes to the terminal.
+    #  Print out each candidate's name, vote count, and percentage of votes to the terminal.
+    print(f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n")
 
     # Determine winning vote count and candidate
 
@@ -83,7 +81,14 @@ for candidate_name in candidate_votes:
         # And, set the winning_candidate equal to the candidate's name.
         winning_candidate = candidate_name
 
-# to do: print out the winning candidate, vote count and percentage to terminal
+# Print out the winning candidate, vote count and percentage to terminal
+winning_candidate_summary =  (
+    f"-------------------------\n"
+    f"Winner: {winning_candidate}\n"
+    f"Winning Vote Count: {winning_count:,}\n"
+    f"Winning Percentage: {winning_percentage:.1f}\n"
+    f"-------------------------\n")
+print(winning_candidate_summary)
 
 
 
@@ -95,13 +100,4 @@ print(candidate_options)
 
 # Print the total votes.
 print(total_votes)
-# A COMPLETE LIST OF CANDIDATES WHO RECEIVED VOTES
 
-#Print the candidate name from each row
-
-
-
-
-# 3. The percentage of votes each candidate won
-# 4. The total number of votes each candidate won
-# 5. The winner of the election based on popular vote.
